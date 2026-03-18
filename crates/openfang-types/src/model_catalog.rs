@@ -49,6 +49,8 @@ pub const KIMI_CODING_BASE_URL: &str = "https://api.kimi.com/coding";
 pub const QIANFAN_BASE_URL: &str = "https://qianfan.baidubce.com/v2";
 pub const VOLCENGINE_BASE_URL: &str = "https://ark.cn-beijing.volces.com/api/v3";
 pub const VOLCENGINE_CODING_BASE_URL: &str = "https://ark.cn-beijing.volces.com/api/coding/v3";
+/// ModelScope (modelscope.cn) — unified Chinese model inference platform
+pub const MODELSCOPE_BASE_URL: &str = "https://api-inference.modelscope.cn/v1";
 
 // ── Chutes.ai ────────────────────────────────────────────────────
 pub const CHUTES_BASE_URL: &str = "https://llm.chutes.ai/v1";
@@ -306,6 +308,7 @@ mod tests {
     }
 
     #[test]
+    #[allow(clippy::const_is_empty)]
     fn test_azure_openai_base_url_empty() {
         // Azure requires user-supplied URL, so the constant must be empty.
         assert!(AZURE_OPENAI_BASE_URL.is_empty());
